@@ -2,9 +2,11 @@
 
 This is the dream coming true for 3 friends to work together towards world dominance. :space_invader: :muscle:
 
-<img src="ScreepsBuddiesLogo.png" alt="Screeps Buddies Logo" width="167"/>
-<img src="NotCringeAtAlllImage.png" alt="Screeps Buddies Logo" width="250"/>
-<img src="ScreepsBuddiesLogo.png" alt="Screeps Buddies Logo" width="167"/>
+<p align="center">
+    <img src="ScreepsBuddiesLogo.png" alt="Screeps Buddies Logo" width="167"/>
+    <img src="NotCringeAtAlllImage.png" alt="Screeps Buddies Logo" width="250"/>
+    <img src="ScreepsBuddiesLogo.png" alt="Screeps Buddies Logo" width="167"/>
+</p>
 
 ## Getting Started
 
