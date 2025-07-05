@@ -16,11 +16,18 @@ const upgrader = mockInstanceOf<Creep>({ memory: { role: 'upgrader' } });
 
 const myController = mockInstanceOf<StructureController>({ my: true });
 const someoneElsesController = mockInstanceOf<StructureController>({ my: false });
-const tower1 = mockStructure(STRUCTURE_TOWER);
-const tower2 = mockStructure(STRUCTURE_TOWER);
+const tower1 = mockStructure(STRUCTURE_TOWER, { spawning: null });
+const tower2 = mockStructure(STRUCTURE_TOWER, { spawning: null });
 const myRoomWithTowers = mockInstanceOf<Room>({
   controller: myController,
-  find: () => [tower1, tower2]
+  name: 'W1N1',
+  energyAvailable: 300,
+  energyCapacityAvailable: 300,
+  find: (type: number, opts?: any) => {
+    if (type === FIND_MY_STRUCTURES && opts && opts.filter && opts.filter.structureType === STRUCTURE_TOWER) return [tower1, tower2];
+    if (type === FIND_MY_STRUCTURES && opts && opts.filter && opts.filter.structureType === STRUCTURE_SPAWN) return [{ spawning: null, spawnCreep: jest.fn() }];
+    return [];
+  }
 });
 const myRoomWithoutTowers = mockInstanceOf<Room>({
   controller: myController,
